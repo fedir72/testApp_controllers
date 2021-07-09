@@ -18,14 +18,22 @@ class FourViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+            navigationItem.title = "Four View Controller"
         [push5VCButton,closeButton].forEach(){$0?.layer.cornerRadius = 8}
     }
     
 
     //MARK: - actions
-   
-    @IBAction func didTapReturn(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    
+    @IBAction func didtapGoTo5VC(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "FifthVC") as FifthViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func didTapReturn(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    
 }
+}
+ 

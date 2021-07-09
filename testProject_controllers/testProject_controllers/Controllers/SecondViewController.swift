@@ -15,7 +15,8 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        title = "SecondView Controller"
         closeButton.layer.cornerRadius = 8
     }
     
