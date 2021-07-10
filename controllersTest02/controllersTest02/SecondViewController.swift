@@ -7,11 +7,19 @@
 
 import UIKit
 
+protocol SecondViewControllerDelegate: class {
+    func getText(text: String)
+}
+
 class SecondViewController: UIViewController {
     
-    //MARK: - outlets
+    //MARC: - properties
     
-    @IBOutlet weak var textLabel: UILabel!
+    weak var delegate: SecondViewControllerDelegate?
+    
+    //MARK: - outlets
+  
+    @IBOutlet  weak var textField: UITextField!
     
 
    //MARK: - viewDidLoad()
@@ -19,10 +27,23 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        textField.delegate = self
+        textField.backgroundColor = .white
         
     }
     
    
+}
+
+extension SecondViewController: UITextFieldDelegate
+{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.delegate?.getText(text: textField.text ?? "empty")
+        self.textField.resignFirstResponder()
+        navigationController?.popViewController(animated: true)
+        return true
+    }
 }
     
 

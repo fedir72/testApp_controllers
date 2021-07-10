@@ -8,12 +8,13 @@
 import UIKit
 
 
-
 class ViewController: UIViewController {
     
     //MARK: - outlets
     
     @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private var colorButtons: [UIButton]!
+    
     
     //MARK: - viewDidLoad()
     
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
         self.textField.delegate = self
+        colorButtons.forEach{$0.layer.cornerRadius = 8}
     }
 
     //MARK: - actions
@@ -31,12 +33,15 @@ class ViewController: UIViewController {
         switch sender.tag {
         
         case 1: vc.title = "Green"
-        case 2: vc.title = "Red"
-        default: vc.title = "Blue"
+        case 2: vc.title = "Blue"
+        default: vc.title = "Red"
         }
         
         vc.view.backgroundColor = sender.backgroundColor
-        vc.textLabel.text = textField.text
+        vc.textField.text = self.textField.text
+        
+        vc.delegate = self
+        
         navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -49,8 +54,16 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.textField.resignFirstResponder()
-        //self.view.endEditing(true)
         return true
     }
     
+}
+
+//MARK: - SecondViewControllerdelegate
+
+extension ViewController: SecondViewControllerDelegate {
+    
+    func getText(text: String) {
+        self.textField.text = text
+    }
 }

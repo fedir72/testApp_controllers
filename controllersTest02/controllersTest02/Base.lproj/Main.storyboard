@@ -85,6 +85,9 @@
                     <navigationItem key="navigationItem" title="Input text" id="xOl-9H-uTZ"/>
                     <connections>
                         <outlet property="textField" destination="fBL-76-cSq" id="8FK-db-TJa"/>
+                        <outletCollection property="colorButtons" destination="lWI-ol-xoB" collectionClass="NSMutableArray" id="t4x-lp-qhN"/>
+                        <outletCollection property="colorButtons" destination="JA1-82-STx" collectionClass="NSMutableArray" id="naG-6H-8pH"/>
+                        <outletCollection property="colorButtons" destination="sYl-fi-gAg" collectionClass="NSMutableArray" id="xfe-sz-BVx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,24 +102,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS3-ZI-o8i">
-                                <rect key="frame" x="31" y="398" width="352" height="110"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="59"/>
-                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6v-Or-KIx">
+                                <rect key="frame" x="117" y="153" width="180" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h7k-fB-JN5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aS3-ZI-o8i" firstAttribute="centerY" secondItem="h7k-fB-JN5" secondAttribute="centerY" id="8L1-JS-Mbb"/>
-                            <constraint firstItem="aS3-ZI-o8i" firstAttribute="height" secondItem="UR6-c6-NZU" secondAttribute="height" multiplier="0.122768" id="Zdv-gz-cY8"/>
-                            <constraint firstItem="aS3-ZI-o8i" firstAttribute="centerX" secondItem="h7k-fB-JN5" secondAttribute="centerX" id="cHb-ap-iMN"/>
-                            <constraint firstItem="aS3-ZI-o8i" firstAttribute="width" secondItem="UR6-c6-NZU" secondAttribute="width" multiplier="0.850242" id="raF-cX-IUx"/>
+                            <constraint firstItem="k6v-Or-KIx" firstAttribute="top" secondItem="h7k-fB-JN5" secondAttribute="top" constant="109" id="Hz9-yh-ylm"/>
+                            <constraint firstItem="k6v-Or-KIx" firstAttribute="centerX" secondItem="h7k-fB-JN5" secondAttribute="centerX" id="eDI-m9-stX"/>
+                            <constraint firstItem="k6v-Or-KIx" firstAttribute="width" secondItem="UR6-c6-NZU" secondAttribute="width" multiplier="0.434783" id="fUi-na-CXa"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textLabel" destination="aS3-ZI-o8i" id="XJG-Gu-VTr"/>
+                        <outlet property="textField" destination="k6v-Or-KIx" id="5e1-om-SAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sT-5s-OuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,9 +152,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
