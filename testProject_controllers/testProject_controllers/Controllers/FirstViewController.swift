@@ -1,5 +1,5 @@
 //
-//  MainController.swift
+//  FirstViewController.swift
 //  testProject_controllers
 //
 //  Created by fedir on 09.07.2021.
@@ -7,16 +7,17 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class FirstViewController: UIViewController {
     
     //MARK: - outlets
     
-    @IBOutlet weak var push2VCButton: UIButton!
-    @IBOutlet weak var modal3VCbutton: UIButton!
-    @IBOutlet weak var modal4VCButton: UIButton!
+    @IBOutlet private weak var push2VCButton: UIButton!
+    @IBOutlet private weak var modal3VCbutton: UIButton!
+    @IBOutlet private weak var modal4VCButton: UIButton!
     
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
+    //MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
