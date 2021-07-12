@@ -7,6 +7,11 @@
 
 import UIKit
 
+private enum Colours: String{
+    case red = "Red"
+    case blue = "Blue"
+    case green = "Green"
+}
 
 class ViewController: UIViewController {
     
@@ -15,26 +20,27 @@ class ViewController: UIViewController {
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private var colorButtons: [UIButton]!
     
-    
     //MARK: - viewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         self.textField.delegate = self
-        colorButtons.forEach{$0.layer.cornerRadius = 8}
+        colorButtons.forEach{$0.layer.cornerRadius = Constant.cornerRadiusForView}
     }
 
     //MARK: - actions
     
     @IBAction func didtapColorButtons(_ sender: UIButton) {
         
-    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SecondVC") as SecondViewController
+        let vc = UIStoryboard(name: Constant.storyboardName, bundle: nil).instantiateViewController(identifier: SecondViewController.id) as SecondViewController
         switch sender.tag {
         
-        case 1: vc.title = "Green"
-        case 2: vc.title = "Blue"
-        default: vc.title = "Red"
+        case 1: vc.title = Colours.green.rawValue
+        case 2: vc.title = Colours.blue.rawValue
+            
+        default: vc.title = Colours.green.rawValue
+            
         }
         
         vc.view.backgroundColor = sender.backgroundColor
@@ -45,7 +51,6 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
         
     }
-    
 }
 
 //MARK: - UITextFieldDelegate
@@ -62,8 +67,8 @@ extension ViewController: UITextFieldDelegate {
 //MARK: - SecondViewControllerdelegate
 
 extension ViewController: SecondViewControllerDelegate {
-    
-    func getText(text: String) {
-        self.textField.text = text
+    func secondViewController(_ viewController: UIViewController, didChanged text: String) {
+        textField.text = text
     }
+     
 }

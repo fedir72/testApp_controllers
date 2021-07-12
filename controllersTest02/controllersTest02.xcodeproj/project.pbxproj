@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A334441C269CA04A003A55AF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334441B269CA04A003A55AF /* Helpers.swift */; };
 		A34076C52698AB4600D92003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34076C42698AB4600D92003 /* AppDelegate.swift */; };
 		A34076C72698AB4600D92003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34076C62698AB4600D92003 /* SceneDelegate.swift */; };
 		A34076C92698AB4600D92003 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34076C82698AB4600D92003 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A334441B269CA04A003A55AF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		A34076C12698AB4600D92003 /* controllersTest02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = controllersTest02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34076C42698AB4600D92003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A34076C62698AB4600D92003 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3344418269CA011003A55AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A34076C82698AB4600D92003 /* ViewController.swift */,
+				A34076D92698B0D100D92003 /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		A34076B82698AB4600D92003 = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +71,8 @@
 			children = (
 				A34076C42698AB4600D92003 /* AppDelegate.swift */,
 				A34076C62698AB4600D92003 /* SceneDelegate.swift */,
-				A34076C82698AB4600D92003 /* ViewController.swift */,
-				A34076D92698B0D100D92003 /* SecondViewController.swift */,
+				A334441B269CA04A003A55AF /* Helpers.swift */,
+				A3344418269CA011003A55AF /* Controllers */,
 				A34076CA2698AB4600D92003 /* Main.storyboard */,
 				A34076CD2698AB4700D92003 /* Assets.xcassets */,
 				A34076CF2698AB4700D92003 /* LaunchScreen.storyboard */,
@@ -143,6 +154,7 @@
 				A34076DA2698B0D100D92003 /* SecondViewController.swift in Sources */,
 				A34076C92698AB4600D92003 /* ViewController.swift in Sources */,
 				A34076C52698AB4600D92003 /* AppDelegate.swift in Sources */,
+				A334441C269CA04A003A55AF /* Helpers.swift in Sources */,
 				A34076C72698AB4600D92003 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
