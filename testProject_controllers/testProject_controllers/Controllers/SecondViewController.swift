@@ -8,16 +8,22 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+
+   //MARK: - properties
+    
+    static let id = "SecondVC"
     
     //MARK: - outlets
     
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet private weak var closeButton: UIButton!
+    
+    //MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "SecondView Controller"
-        closeButton.layer.cornerRadius = 8
+        title = "Second View Controller"
+        closeButton.layer.cornerRadius = Helpers.roundValue
     }
     
     //MARK: - actions

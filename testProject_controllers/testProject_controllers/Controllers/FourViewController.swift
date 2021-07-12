@@ -9,31 +9,39 @@ import UIKit
 
 class FourViewController: UIViewController {
     
+    //MARK: - properties
+    
+    static let id = "FourVC"
       
     //MARK: - outlets
    
-    @IBOutlet weak var push5VCButton: UIButton!
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet private weak var push5VCButton: UIButton!
+    @IBOutlet private weak var closeButton: UIButton!
     
- 
+    //MARK: - viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            navigationItem.title = "Four View Controller"
-        [push5VCButton,closeButton].forEach(){$0?.layer.cornerRadius = 8}
+        navigationItem.title = "Four View Controller"
+        [push5VCButton,closeButton].forEach(){$0?.layer.cornerRadius = Helpers.roundValue}
     }
     
 
     //MARK: - actions
     
     @IBAction func didtapGoTo5VC(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "FifthVC") as FifthViewController
-        navigationController?.pushViewController(vc, animated: true)
+        if let vc = Helpers.getController(identifier: FifthViewController.id,
+                                          goTo: FifthViewController(),
+                                          transitStyle: nil) as? FifthViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func didTapReturn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     
-}
+  }
+    
 }
  

@@ -9,14 +9,20 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
+    //MARK: - properties
+    
+    static let id = "ThirdVC"
+    
     //MARK: - outlets
 
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet private weak var closeButton: UIButton!
+    
+    //MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        closeButton.layer.cornerRadius = 8
-        navigationController?.navigationBar.isHidden = true
+
+        closeButton.layer.cornerRadius = Helpers.roundValue
     }
     
 

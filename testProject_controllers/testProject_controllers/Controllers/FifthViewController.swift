@@ -9,14 +9,20 @@ import UIKit
 
 class FifthViewController: UIViewController {
     
+    //MARK: - properties
+    
+    static let id = "FifthVC"
+    
     //MARK: - outlets
     
-    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet private weak var closeButton: UIButton!
+    
+    //MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Fifth View Controller"
-        closeButton.layer.cornerRadius = 8
+        closeButton.layer.cornerRadius = Helpers.roundValue
     }
     
     //MARK: - actions
