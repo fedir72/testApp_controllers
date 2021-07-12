@@ -23,14 +23,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Second View Controller"
-        closeButton.layer.cornerRadius = Helpers.roundValue
+       
     }
     
-    //MARK: - actions
-
-    @IBAction func didTapReturnButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-
 }

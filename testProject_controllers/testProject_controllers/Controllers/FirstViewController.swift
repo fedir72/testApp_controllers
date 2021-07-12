@@ -41,17 +41,6 @@ class FirstViewController: UIViewController {
          }
         
     }
-    
-    @IBAction  func didTapGoTo4VCButton(_ sender: UIButton) {
-        if let vc = Helpers.getController(identifier: FourViewController.id,
-                                          transitStyle: .coverVertical) as? FourViewController {
-            let nvc = UINavigationController(rootViewController: vc)
-            nvc.modalPresentationStyle = .fullScreen
-            present(nvc, animated: true, completion: nil)
-        }
-    }
-    
-    
-
+ 
 }
 

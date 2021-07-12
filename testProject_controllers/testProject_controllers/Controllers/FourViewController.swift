@@ -16,7 +16,6 @@ class FourViewController: UIViewController {
     //MARK: - outlets
    
     @IBOutlet private weak var push5VCButton: UIButton!
-    @IBOutlet private weak var closeButton: UIButton!
     
     //MARK: - viewDidLoad
     
@@ -24,7 +23,7 @@ class FourViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Four View Controller"
-        [push5VCButton,closeButton].forEach(){$0?.layer.cornerRadius = Helpers.roundValue}
+        push5VCButton.layer.cornerRadius = Helpers.roundValue
     }
     
 
@@ -35,11 +34,6 @@ class FourViewController: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    @IBAction func didTapReturnButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    
-  }
     
 }
  
