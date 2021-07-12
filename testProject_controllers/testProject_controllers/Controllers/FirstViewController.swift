@@ -11,7 +11,7 @@ class FirstViewController: UIViewController {
     
     //MARK: - outlets
     
-    @IBOutlet  weak var push2VCButton: UIButton!
+    @IBOutlet private weak var push2VCButton: UIButton!
     @IBOutlet private weak var modal3VCbutton: UIButton!
     @IBOutlet private weak var modal4VCButton: UIButton!
     
@@ -26,17 +26,15 @@ class FirstViewController: UIViewController {
     
     //MARK: - actions
     
-    @IBAction func didTapGoTo2VC(_ sender: UIButton) {
+    @IBAction func didTapGoTo2VCButton(_ sender: UIButton) {
         if  let vc = Helpers.getController(identifier: SecondViewController.id,
-                                           goTo: SecondViewController(),
                                            transitStyle: nil) as? SecondViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
     
-    @IBAction func didtapGoTo3VC(_ sender: UIButton) {
+    @IBAction func didtapGoTo3VCButton(_ sender: UIButton) {
         if let vc = Helpers.getController(identifier: ThirdViewController.id,
-                                          goTo: ThirdViewController(),
                                           transitStyle: .coverVertical,
                                           presentStyle: .fullScreen) as? ThirdViewController {
             present(vc, animated: true, completion: nil)
@@ -44,9 +42,8 @@ class FirstViewController: UIViewController {
         
     }
     
-    @IBAction  func didTapGoTo4VC(_ sender: UIButton) {
+    @IBAction  func didTapGoTo4VCButton(_ sender: UIButton) {
         if let vc = Helpers.getController(identifier: FourViewController.id,
-                                          goTo: FourViewController(),
                                           transitStyle: .coverVertical) as? FourViewController {
             let nvc = UINavigationController(rootViewController: vc)
             nvc.modalPresentationStyle = .fullScreen

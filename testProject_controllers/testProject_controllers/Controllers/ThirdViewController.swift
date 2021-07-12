@@ -28,7 +28,7 @@ class ThirdViewController: UIViewController {
 
     //MARK: - actions
     
-    @IBAction func didTapReturn(_ sender: UIButton) {
+    @IBAction func didTapReturnButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     

@@ -27,7 +27,7 @@
                                             <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="didTapGoTo2VC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WN6-8T-pKB"/>
+                                            <action selector="didTapGoTo2VCButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FOi-8J-wdp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCV-jl-unm">
@@ -38,7 +38,7 @@
                                             <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="didtapGoTo3VC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="plw-BI-3vr"/>
+                                            <action selector="didtapGoTo3VCButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaf-0P-1oA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFw-Du-pgK">
@@ -49,7 +49,7 @@
                                             <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="didTapGoTo4VC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmQ-Fp-D2w"/>
+                                            <action selector="didTapGoTo4VCButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tA8-Je-Ckt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -93,7 +93,7 @@
                                     <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapReturn:" destination="fbp-2d-V45" eventType="touchUpInside" id="YCd-SU-jbP"/>
+                                    <action selector="didTapReturnButton:" destination="fbp-2d-V45" eventType="touchUpInside" id="bhX-Fp-Oby"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -138,7 +138,7 @@
                                     <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapReturn:" destination="eAL-Es-J9N" eventType="touchUpInside" id="uZE-hE-U8c"/>
+                                    <action selector="didTapReturnButton:" destination="eAL-Es-J9N" eventType="touchUpInside" id="ZEC-kZ-PT8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -180,7 +180,7 @@
                                     <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapReturn:" destination="PcO-Qy-hYA" eventType="touchUpInside" id="WR7-7n-q1Z"/>
+                                    <action selector="didTapReturnButton:" destination="PcO-Qy-hYA" eventType="touchUpInside" id="M0a-uH-ZzA"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vl9-gw-Iwr">
@@ -195,7 +195,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didtapGoTo5VC:" destination="PcO-Qy-hYA" eventType="touchUpInside" id="hai-rJ-38l"/>
+                                    <action selector="didtapGoTo5VCButton:" destination="PcO-Qy-hYA" eventType="touchUpInside" id="Xnb-Dd-efN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -239,7 +239,7 @@
                                     <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapReturn:" destination="GQO-Da-jPW" eventType="touchUpInside" id="Cca-fX-z6O"/>
+                                    <action selector="didTapReturnButton:" destination="GQO-Da-jPW" eventType="touchUpInside" id="B9h-fP-0UO"/>
                                 </connections>
                             </button>
                         </subviews>

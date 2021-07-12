@@ -28,7 +28,7 @@ class SecondViewController: UIViewController {
     
     //MARK: - actions
 
-    @IBAction func didTapReturn(_ sender: UIButton) {
+    @IBAction func didTapReturnButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     

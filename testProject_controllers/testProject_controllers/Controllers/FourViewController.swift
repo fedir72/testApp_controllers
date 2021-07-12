@@ -30,15 +30,13 @@ class FourViewController: UIViewController {
 
     //MARK: - actions
     
-    @IBAction func didtapGoTo5VC(_ sender: UIButton) {
-        if let vc = Helpers.getController(identifier: FifthViewController.id,
-                                          goTo: FifthViewController(),
-                                          transitStyle: nil) as? FifthViewController {
+    @IBAction func didtapGoTo5VCButton(_ sender: UIButton) {
+        if let vc = Helpers.getController(identifier: FifthViewController.id,transitStyle: nil) as? FifthViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
     
-    @IBAction func didTapReturn(_ sender: UIButton) {
+    @IBAction func didTapReturnButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     
   }
